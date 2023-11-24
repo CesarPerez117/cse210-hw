@@ -1,0 +1,2 @@
+Simple Goal | Running I want to run 5 km | 200
+CheckListGoal | Chicken time | I want to each chicken 3 times this week | 50 | 3 | 200 | 0
