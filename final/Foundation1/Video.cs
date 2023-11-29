@@ -48,8 +48,8 @@ public class Video
 
     //public void AddCommentToList(string name, string text)
     //{
-    //    _commentsList.Add(Comment.GetName(name)); // This does not work, I need to use constructors.
-    //}
+    //    _commentsList.Add(Comment.GetName(name) + Comment.GetText(text)); 
+    //}  // This does not work, I need to use constructors.
     public void AddCommentToList(string name, string text)
     {
         Comment comment = new Comment(name, text);
