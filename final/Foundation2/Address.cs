@@ -33,8 +33,8 @@ public class Address
 
     public string GetAddress()
     {   
-        _address = $"{_street}, {_city}, {_state}, {_country}";
-        return _address;
-        //return $"{_street}, {_city}, {_state}, {_country}";
+        //_address = $"{_street}, {_city}, {_state}, {_country}";
+        //return _address;
+        return $"{_street}, {_city}, {_state}, {_country}";
     }
 }
