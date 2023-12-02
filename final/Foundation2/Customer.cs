@@ -3,12 +3,27 @@ using System;
 public class Customer
 {
     private string _customerName;
+    // private string _address = Address.GetAddress();
+    private Address _address;
 
-    Address address = new Address(string street, string city, string state, string country);
-    private string _address = Address.
-
-    public Customer(string customerName)
+    public Customer(string customerName, Address address)
     {
         _customerName = customerName;
+        _address = address;
     }
+
+    public string GetCustomerName()
+    {
+        return _customerName;
+    }
+    public Address GetCustomerAddress()
+    {
+        return _address;
+    }
+    public bool IsInUSA()
+    {
+        return _address.IsInUSA();
+    }
+
+
 }

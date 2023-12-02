@@ -7,8 +7,8 @@ public class Address
     private string _city;
     private string _state;
     private string _country;
-    private bool _isInUSA;
-    private string _address;
+
+    // private string _address;
 
     public Address(string street, string city, string state, string country)
     {
@@ -16,11 +16,12 @@ public class Address
         _city = city;
         _state = state;
         _country = country;
-        _isInUSA = false;
     }
 
-    public void IsInUSA()
+    public bool IsInUSA()
     {
+        bool _isInUSA;
+
         if (_country == "USA")
         {
             _isInUSA = true;
@@ -29,12 +30,14 @@ public class Address
         {
             _isInUSA = false;
         }
+
+        return _isInUSA;
     }
 
     public string GetAddress()
     {   
         //_address = $"{_street}, {_city}, {_state}, {_country}";
         //return _address;
-        return $"{_street}, {_city}, {_state}, {_country}";
+        return $"{_street}, {_city}, \n{_state}, {_country}";
     }
 }
