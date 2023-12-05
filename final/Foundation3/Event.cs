@@ -40,7 +40,7 @@ public class Event
         return $"Title: {_eventTitle}\nDescription: {_eventDescription}\nDate: {_eventDate} | Time: {_eventTime}\nAddress: {_address}";
     }
 
-    // Teacher Nathan said in the Teams Server that I can use Polymorphism and I need it here.
+    // Teacher Nathan said in the Teams Server that I can use Polymorphism if I consider and I need it here.
     public virtual string FullDetails()
     {
         // the same as standar but will add from the child classes 
