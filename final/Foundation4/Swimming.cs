@@ -3,6 +3,10 @@ using System;
 public class Swimming : Activity
 {
     // Note: the length of a lap in the lap pool is 50 meters.
+
+    // I am having errors displaying this class
+
+
     // attributes 
     private int _numberOfLaps;
     private double _swimmingDistance;
