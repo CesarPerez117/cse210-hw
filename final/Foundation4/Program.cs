@@ -4,8 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Welcome to the Exercise Record!");
-        Console.WriteLine();
+        Console.WriteLine("\nWelcome to the Exercise Record!\n");
 
         // Running
         Running runningE = new Running("Running", "03 Nov 2022", 30, 4.8);
@@ -16,9 +15,9 @@ class Program
         Cycling cycling = new Cycling("Cycling", "02 Dec 2023", 62, 22);
 
         // Swimming 
-        Swimming swimming = new Swimming("Swimming", "05 Jun 2023", 35, 0, 12);
+        Swimming swimming = new Swimming("Swimming", "05 Jun 2023", 15, 0, 12);
 
-        Console.WriteLine("Let's Display the Summary: ");
+        Console.WriteLine("Let's Display the Summary: \n");
 
         // For Running Exercise
         Console.WriteLine(runningE.DisplaySummary());

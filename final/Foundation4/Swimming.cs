@@ -6,39 +6,44 @@ public class Swimming : Activity
 
     // I am having errors displaying this class
 
+    // Final Note: Now is working. My problem is that I was doing mathematical operacion between double and int and that 
+    // returns 0 in every case for some reason. 
+
 
     // attributes 
-    private int _numberOfLaps;
-    private double _swimmingDistance;
-    private int _minutes;
-    private string _date;
+    private double _numberOfLaps;
+    //private double _swimmingDistance;
+    //private int _minutes;
 
     // constructor
     public Swimming(string activity, string date, int minutes, double distance, int numberOfLaps): base(activity, date, minutes, distance)
     {
         _numberOfLaps = numberOfLaps;
-        _minutes = minutes;
-        _date = date;
+        //_minutes = minutes;
     }
 
     // methods
 
-    public override double GetDistance()
+    public double GetNumberOfLaps()
     {
-        _swimmingDistance = _numberOfLaps * 50 / 1000;
-        return _swimmingDistance;
+        return _numberOfLaps;
+    }
+    public double GetSwimmingDistance()
+    {
+        //return GetNumberOfLaps() * 50 / 1000;
+        return (_numberOfLaps * 50) / 1000;
     }
     public override double CalculateSpeedKmh()
     {
-        return _swimmingDistance / _minutes * 60;
+        return GetSwimmingDistance() / GetMinutes() * 60;
     }
     public override double CalculatePace()
     {
-        return _minutes / _swimmingDistance;
+        return GetMinutes() / GetSwimmingDistance();
     }
     public override string DisplaySummary()
     {
-        return $"{_date} | {GetActivity()} | ({_minutes} minutes): Number of Laps: {_numberOfLaps} laps, Distance: {_swimmingDistance} km, Speed: {CalculateSpeedKmh():F2} kph, Pace: {CalculatePace():F2} min per km";
+        return $"{GetDate()} | {GetActivity()} | ({GetMinutes()} minutes): Number of Laps: {GetNumberOfLaps()} laps, Distance: {GetSwimmingDistance()} km, Speed: {CalculateSpeedKmh():F2} kph, Pace: {CalculatePace():F2} min per km";
     }
 
 }

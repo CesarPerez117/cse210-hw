@@ -4,7 +4,7 @@ public class Activity
 {
     // attributes 
     private string _date;
-    private int _minutes;
+    private double _minutes;
     private double _distance;
     //private double _speed;
     //private double _pace;
@@ -27,6 +27,14 @@ public class Activity
     {
         return _activity;
     }
+    public string GetDate()
+    {
+        return _date;
+    }
+    public double GetMinutes()
+    {
+        return _minutes;
+    }
     public virtual double GetDistance()
     {
         return _distance;
@@ -43,7 +51,7 @@ public class Activity
     }
     public virtual string DisplaySummary()
     {   
-        return $"{_date} | {GetActivity()} | ({_minutes} minutes): Distance: {GetDistance()} km, Speed: {CalculateSpeedKmh():F2} kph, Pace: {CalculatePace():F2} min per km";
+        return $"{GetDate()} | {GetActivity()} | ({GetMinutes()} minutes): Distance: {GetDistance()} km, Speed: {CalculateSpeedKmh():F2} kph, Pace: {CalculatePace():F2} min per km";
     }
     
 
