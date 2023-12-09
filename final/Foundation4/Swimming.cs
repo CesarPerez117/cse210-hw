@@ -16,7 +16,7 @@ public class Swimming : Activity
     //private int _minutes;
 
     // constructor
-    public Swimming(string activity, string date, int minutes, double distance, int numberOfLaps): base(activity, date, minutes, distance)
+    public Swimming(string activity, string date, int minutes, int numberOfLaps): base(activity, date, minutes)
     {
         _numberOfLaps = numberOfLaps;
         //_minutes = minutes;
@@ -31,7 +31,7 @@ public class Swimming : Activity
     public double GetSwimmingDistance()
     {
         //return GetNumberOfLaps() * 50 / 1000;
-        return (_numberOfLaps * 50) / 1000;
+        return (GetNumberOfLaps() * 50) / 1000;
     }
     public override double CalculateSpeedKmh()
     {

@@ -5,17 +5,17 @@ public class Activity
     // attributes 
     private string _date;
     private double _minutes;
-    private double _distance;
+    //private double _distance;
     //private double _speed;
     //private double _pace;
     private string _activity;
 
     // constructor
-    public Activity(string activity, string date, int minutes, double distance)
+    public Activity(string activity, string date, int minutes)
     {
         _date = date;
         _minutes = minutes;
-        _distance = distance;
+        //_distance = distance;
         //_speed = speed;
         //_pace = pace;
         _activity = activity;
@@ -35,19 +35,18 @@ public class Activity
     {
         return _minutes;
     }
+    // All methods will start with Running standar but will change when needed. 
     public virtual double GetDistance()
     {
-        return _distance;
+        return 0.0;
     }
-
-    // All methods will start with Running standar but will change when needed. 
     public virtual double CalculateSpeedKmh()
     {
-        return (_distance / _minutes) * 60;
+        return 0.0;
     }
     public virtual double CalculatePace()
     {
-        return _minutes / _distance;
+        return 0.0;
     }
     public virtual string DisplaySummary()
     {   
